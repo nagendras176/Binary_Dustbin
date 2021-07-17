@@ -1,0 +1,123 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title>BINARY_DUSTBIN</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+        <script src="/socket.io/socket.io.js"></script>
+        
+        <script>
+          var socket = io();
+        
+          socket.on('data',(data)=>{
+                 alert('NEW DATA RECIVED FROM WEBSOCKET'+data);
+                 location.reload();
+
+
+
+             })
+        </script>
+
+        <style>
+            body{
+              background-color: rgb(40,41,40);
+              font-family: 'Orbitron', sans-serif;
+              color: aliceblue;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              
+              }
+            
+            header div h1{
+                font-size: 50px;
+                color: aqua;
+            }
+
+
+
+            header div h4{
+                font-size: 30px;
+                color:burlywood;
+            }
+
+            header{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                border-bottom:solid aqua 1px;
+                align-items: center;
+
+
+            }
+
+            header a{
+                color: aqua;
+                font-size: 30px;
+                text-decoration: none;
+                margin-right: 10%;
+                padding: 1%;
+                border: solid 1px aqua;
+                border-radius: 10%;
+            }
+
+            .container{
+                display: inline-flex;
+                flex-direction: row;
+                margin-top: 5%;
+                justify-content: center;
+                border: solid 1px aqua;
+                padding: 3%;
+                width: 80%;
+                margin-left: 10%;
+                border-radius: 10%;
+            }
+           
+            #logo{
+                display: flex;
+                flex-direction: row;
+                justify-content: start;
+                align-items: center;
+                
+            }
+
+            #college{
+                border-radius: 50%;
+            }
+
+            footer{
+                margin-top: 10%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+        
+
+        </style>
+    </head>
+    <body onload="alert('If this is mobile, please switch to Desktop Mode Since, web is not designed responisve')">
+       <header>
+           <div id="logo">
+           <h1>BINARY_DUSTBIN</h1>
+            <h4>(PHASE_2)</h4>
+           </div>
+           <a href="#foot">AboutUS</a>
+       </header>
+
+       <div class="container">
+         
+       <img src="http://localhost:4000/dustbin1" alt="dustbin" id="Img1"></img>
+       <img src="http://localhost:4000/dustbin2" alt="dustbin" id="Img2"></img>
+       <img src="http://localhost:4000/dustbin3" alt="dustbin" id="Img3"></img>
+    </div>
+     <footer id="foot">
+         <img src="http://localhost:4000/college" alt="clg_logo" id="college"></img>
+         <h2>Project made by Sahil MB (1EW18EC099) and Sudha (1EW18EC114) under guidance of Divya Mam,ECE Department</h2>
+
+
+     </footer>
+      
+    </body>  
+</html>
